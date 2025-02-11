@@ -6,9 +6,11 @@ import GithubIcon from '../../icons/github'
 import LogoIcon from '../../icons/logo'
 import LangSwitcher from './LangSwitcher'
 import ThemeSwitch from './ThemeSwitch'
+
 interface Props {
   locale: string
 }
+
 export const Header: FC<Props> = ({ locale }) => {
   const t = useTranslations('')
   return (
