@@ -20,7 +20,7 @@ export const Header: FC<Props> = ({ locale }) => {
           <div className='mb-2 h-14 w-14'>
             <LogoIcon />
           </div>
-          <strong className='mx-2 select-none'>Template</strong>
+          <strong className='mx-2 select-none'>Akmal Inoyatov</strong>
         </div>
       </Link>
       <div className='flex flex-row items-center gap-3'>
@@ -28,8 +28,8 @@ export const Header: FC<Props> = ({ locale }) => {
           <Link lang={locale} href={`/about`}>
             {t('About')}
           </Link>
-          <a href=''>{t('Support')}</a>
-          <a href=''>{t('Other')}</a>
+          <a href=''>{t('Projects')}</a>
+          <a href=''>{t('Contact')}</a>
         </nav>
         <ThemeSwitch />
         <LangSwitcher />

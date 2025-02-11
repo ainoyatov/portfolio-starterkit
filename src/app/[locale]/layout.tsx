@@ -23,8 +23,8 @@ const space_grotesk = Space_Grotesk({
   variable: '--font-space-grotesk'
 })
 export const metadata: Metadata = {
-  title: "Resume Portfolio",
-  description: "Akmal Inoyatov's online resume desgined to provide a deep dive into experience and projects"
+  title: "Akmal Inoyatov Portfolio",
+  description: "Akmal Inoyatov's online resume desgined to provide a deep dive into experiences and projects"
 }
 
 export default function RootLayout({
