@@ -15,5 +15,6 @@
   "This_is_a_simple_about_page_just_to_show_how_you_can_use_the_internationalization_in_different_pages": "Ceci est une simple page à propos, juste pour montrer comment vous pouvez utiliser l'internationalisation sur différentes pages",
   "Performant": "Performant",
   "Projects": "Projets",
-  "Contact": "Contact"
+  "Contact": "Contact",
+  "Page_Description": "Le texte de remplacement va ici"
 }
