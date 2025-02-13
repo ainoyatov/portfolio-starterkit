@@ -9,31 +9,31 @@ export default function DashboardPage() {
         <h1 className='text-center text-7xl font-extrabold leading-tight'>
           {t('An')}{' '}
           <span className='bg-span-bg bg-clip-text text-transparent'>
-            {t('Booster')}
+            {t('Tech_Leader')}
           </span>
           <br />
-          {t('to_Your_NextJS_Apps')}
+          {t('Title')}
         </h1>
         <div className='my-6 px-20 text-center text-2xl text-text-secondary'>
           {t(
-            'An_approachable_performant_and_versatile_boilerplate_for_building_SSR_applications'
+            'Title_Description'
           )}
         </div>
         <div className='mt-4 flex flex-row gap-4'>
           <a
-            href='https://github.com/new?template_name=nextjs-template&template_owner=yahyaparvar'
+            href='https://github.com/ainoyatov'
             target='_blank'
           >
             <Button rounded size='large'>
-              {t('Use_Template')}
+              {t('View_Portfolio')}
             </Button>
           </a>
           <a
-            href='https://github.com/yahyaparvar/nextjs-template'
+            href='https://github.com/ainoyatov'
             target='_blank'
           >
             <Button rounded size='large' variant='secondary'>
-              {t('Learn_More')}
+              {t('Contact_Me')}
             </Button>
           </a>
         </div>
