@@ -10,7 +10,7 @@ type CustomMiddleware = (req: NextRequest) => Promise<NextRequest>
 
 // Custom middleware function that logs a message and returns the request as-is
 const customMiddleware: CustomMiddleware = async req => {
-  console.log('Custom middleware executed before next-intl') // Log to indicate custom middleware execution
+  // console.log('Custom middleware executed before next-intl') // Log to indicate custom middleware execution
   return req // Returning the request unmodified; you can add custom logic here if needed
 }
 

@@ -28,8 +28,14 @@ export const Header: FC<Props> = ({ locale }) => {
           <Link lang={locale} href={`/about`}>
             {t('About')}
           </Link>
-          <a href=''>{t('Projects')}</a>
-          <a href=''>{t('Contact')}</a>
+          <Link lang={locale} href={`/projects`}>
+            {t('Projects')}
+          </Link>
+          <Link lang={locale} href={`/contact`}>
+            {t('Contact')}
+          </Link>
+          {/* <a href='/projects'>{t('Projects')}</a>
+          <a href='/contact'>{t('Contact')}</a> */}
         </nav>
         <ThemeSwitch />
         <LangSwitcher />
