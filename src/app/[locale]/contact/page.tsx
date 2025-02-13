@@ -1,6 +1,7 @@
-import { useTranslations } from "next-intl"
+import { useTranslations } from "next-intl";
 
-const ProjectsPage = () => {
+export default function ContactPage () {
+
     const t = useTranslations('')
     return (
         <div className='px-32 py-24 text-center text-2xl'>
@@ -8,5 +9,3 @@ const ProjectsPage = () => {
         </div>
     )
 }
-
-export default ProjectsPage
