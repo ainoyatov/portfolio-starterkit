@@ -21,5 +21,12 @@
   "Title": "Innovating with AI",
   "Title_Description": "Helping small businesses thrive with modern, scalable, and AI-powered web solutions",
   "View_Portfolio": "View Portfolio",
-  "Contact_Me": "Get Started"
+  "Contact_Me": "Get Started",
+  "Column_1_title": "Skills & Expertise",
+  "Columns_1_description": "Frontend and backend development, modern web frameworks, AI integration, scalable architecture, and user-centric design",
+  "Column_2_title": "Business & Technology",
+  "Columns_2_description": "Combining entrepreneurial vision with technical expertise to drive revenue growth and expand sales through modern eCommerce solutions",
+  "Column_3_title": "Results-Driven Solutions",
+  "Columns_3_description": "Focused on delivering measurable results through innovative web development, helping businesses boost revenue and achieve their goals"
+
 }
