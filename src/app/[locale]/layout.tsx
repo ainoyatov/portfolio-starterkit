@@ -24,7 +24,7 @@ const space_grotesk = Space_Grotesk({
 })
 export const metadata: Metadata = {
   title: "Akmal Inoyatov Portfolio",
-  description: "Akmal Inoyatov's online resume desgined to provide a deep dive into experiences and projects"
+  description: "Akmal Inoyatov's online resume designed to provide a deep dive into experiences and projects"
 }
 
 export default function RootLayout({
