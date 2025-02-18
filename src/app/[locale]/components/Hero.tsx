@@ -10,7 +10,7 @@ interface Props {
 }
 
 
-export const HeroSection = () => {
+export const HeroSection: FC<Props> = ({locale}) => {
 
     const t = useTranslations('')
 
@@ -31,22 +31,20 @@ export const HeroSection = () => {
                     )}
                 </div>
                 <div className='mt-4 flex flex-row gap-4'>
-                    <a
-                        href='https://github.com/ainoyatov'
-                        target='_blank'
-                    >
+
+                    <Link href={`/projects`} lang={locale}>
                         <Button rounded size='large'>
                             {t('View_Portfolio')}
                         </Button>
-                    </a>
-                    <a
-                        href='https://github.com/ainoyatov'
-                        target='_blank'
-                    >
-                        <Button rounded size='large' variant='secondary'>
+                    </Link>
+
+                    <Link href={`/contact`} lang={locale}>
+                        <Button rounded size='large' variant="secondary">
                             {t('Contact_Me')}
                         </Button>
-                    </a>
+                    </Link>
+                    
+                    
                 </div>
             </section>
 
