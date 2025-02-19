@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl'
 import { FC } from 'react'
 import GithubIcon from '../../icons/github'
 import LogoIcon from '../../icons/logo'
+import TornadoIcon from '../../icons/tornado'
 import LangSwitcher from './LangSwitcher'
 import ThemeSwitch from './ThemeSwitch'
 
@@ -16,10 +17,11 @@ export const Header: FC<Props> = ({ locale }) => {
   return (
     <div className='mx-auto flex max-w-screen-2xl flex-row items-center justify-between p-5'>
       <Link lang={locale} href='/'>
-        <div className='flex flex-row items-center'>
-          {/* <div className='mb-2 h-14 w-14'>
-            <LogoIcon />
-          </div> */}
+        <div className='flex flex-row place-items-center'>
+          <div className='h-14 w-14 items-center'>
+            {/* <LogoIcon /> */}
+            <TornadoIcon />
+          </div>
           <strong className='mx-2 select-none'>Akmal Inoyatov</strong>
         </div>
       </Link>
