@@ -28,21 +28,3 @@ function TornadoIcon () {
 }
 
 export default TornadoIcon
-
-// rounded AI logo
-
-{/* <svg
-  xmlns='http://www.w3.org/2000/svg'
-  viewBox='0 0 50 50'
-  width='auto'
-  height='auto'
->
-  <defs>
-    <linearGradient id='textGradient' x1='0%' y1='0%' x2='0%' y2='100%'>
-      <stop offset='0%' stopColor='#B0B0B0'/>
-      <stop offset='100%' stopColor='#6D6D6D'/>
-    </linearGradient>
-  </defs>
-  <circle cx='25' cy='25' r='12' stroke='url(#textGradient)' strokeWidth='2' fill='none'/>
-  <text x='17' y='30' fontSize='14' fontFamily='Arial' fontWeight='bold' fill='url(#textGradient)'>AI</text>
-</svg> */}
