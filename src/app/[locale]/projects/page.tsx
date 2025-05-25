@@ -1,4 +1,4 @@
-// src/app/[locale]/projects/page.tsx
+
 import { useTranslations } from 'next-intl';
 import { ProjectCard } from '@/src/app/[locale]/components/ProjectCard';
 import { projects } from '@/src/data/projectData';
