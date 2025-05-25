@@ -12,7 +12,7 @@ export const ProjectCard = ({ project }: { project: Project }) => {
           alt={project.title}
           width={600}
           height={400}
-          className="w-full h-48 object-cover"
+          className="w-full h-auto object-cover"
         />
         <div className="p-4">
           <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
