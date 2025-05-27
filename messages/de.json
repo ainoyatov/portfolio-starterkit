@@ -2,13 +2,12 @@
   "About": "Über",
   "Theme": "Thema",
   "Projects": "Projekte",
-  "Contact": "Kontakt",
   "Page_Description": "Platzhaltertext kommt hier hin",
   "Tech_Leader": "Technologieführer",
   "Title": "Innovation mit KI",
   "Title_Description": "Kleine Unternehmen mit modernen, skalierbaren und KI-gestützten Weblösungen unterstützen",
+  
   "View_Portfolio": "Portfolio anzeigen",
-  "Contact_Me": "Loslegen",
   "Column_1_title": "Fähigkeiten & Fachkenntnisse",
   "Columns_1_description": "Frontend- und Backend-Entwicklung, moderne Web-Frameworks, KI-Integration, skalierbare Architektur und benutzerzentriertes Design",
   "Column_2_title": "Geschäft & Technologie",
@@ -33,5 +32,10 @@
   "About_2_title": "Marken- & visuelle Identität",
   "About_2_description": "Entwicklung konsistenter Markenauftritte durch Logo-Design, Farbpaletten und Typografie – für ein einprägsames Erscheinungsbild auf Websites, Verpackungen und Online-Shops.",
   "About_3_title": "Digitale Strategie, SEO & Conversion",
-  "About_3_description": "Wachstum durch maßgeschneiderte digitale Strategien, Suchmaschinenoptimierung und conversion-orientierte Maßnahmen – optimiert für Inhalte und E-Commerce."
+  "About_3_description": "Wachstum durch maßgeschneiderte digitale Strategien, Suchmaschinenoptimierung und conversion-orientierte Maßnahmen – optimiert für Inhalte und E-Commerce.",
+  
+  "Contact": "Kontakt",
+  "Contact_Me": "Loslegen",
+  "Contact_Description": "Du hast ein Projekt im Kopf oder möchtest einfach Hallo sagen? Ich freue mich auf deine Nachricht."
+
 }

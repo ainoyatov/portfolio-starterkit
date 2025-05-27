@@ -51,7 +51,7 @@ export default function About({params}:{params: {locale:string}}) {
         {/* Call to Action */}
         <div className="text-center mt-10">
           <h2 className="text-2xl font-bold mb-4">{t('Contact')}</h2>
-          <p className="text-gray-600 mb-6">{t('Page_Description')}</p>
+          <p className="text-gray-600 mb-6">{t('Contact_Description')}</p>
           <a
             href={`/${locale}/contact`}
             className="inline-block bg-black text-white px-6 py-3 rounded hover:bg-gray-800 transition"

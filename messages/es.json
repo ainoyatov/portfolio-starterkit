@@ -2,13 +2,13 @@
   "About": "Acerca de",
   "Theme": "Tema",
   "Projects": "Proyectos",
-  "Contact": "Contacto",
+  
   "Page_Description": "El texto de marcador de posición va aquí",
   "Tech_Leader": "Líder tecnológico",
   "Title": "Innovando con IA",
   "Title_Description": "Ayudando a las pequeñas empresas a prosperar con soluciones web modernas, escalables y potenciadas por IA",
   "View_Portfolio": "Ver portafolio",
-  "Contact_Me": "Comenzar",
+  
   "Column_1_title": "Habilidades y Experiencia",
   "Columns_1_description": "Desarrollo frontend y backend, marcos web modernos, integración de IA, arquitectura escalable y diseño centrado en el usuario",
   "Column_2_title": "Negocios y Tecnología",
@@ -33,5 +33,9 @@
   "About_2_title": "Identidad de Marca y Visual",
   "About_2_description": "Creación de sistemas de marca coherentes mediante diseño de logotipos, paletas de colores y tipografía para lograr una presencia consistente y memorable en sitios web, empaques y tiendas online.",
   "About_3_title": "Estrategia Digital, SEO y Conversión",
-  "About_3_description": "Impulsamos el crecimiento online mediante estrategias digitales personalizadas, optimización en buscadores y técnicas enfocadas en la conversión — optimizadas tanto para contenido como para comercio electrónico."
+  "About_3_description": "Impulsamos el crecimiento online mediante estrategias digitales personalizadas, optimización en buscadores y técnicas enfocadas en la conversión — optimizadas tanto para contenido como para comercio electrónico.",
+
+  "Contact": "Contacto",
+  "Contact_Me": "Comenzar",
+  "Contact_Description": "¿Tienes un proyecto en mente o solo quieres saludar? Me encantaría saber de ti."
 }

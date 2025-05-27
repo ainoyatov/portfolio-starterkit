@@ -2,13 +2,13 @@
   "About": "À propos",
   "Theme": "Thème",
   "Projects": "Projets",
-  "Contact": "Contact",
+  
   "Page_Description": "Le texte de remplacement va ici",
   "Tech_Leader": "Leader technologique",
   "Title": "Innover avec l’IA",
   "Title_Description": "Aider les petites entreprises à prospérer grâce à des solutions web modernes, évolutives et alimentées par l’IA",
   "View_Portfolio": "Voir le portfolio",
-  "Contact_Me": "Commencer",
+  
   "Column_1_title": "Compétences & Expertise",
   "Columns_1_description": "Développement frontend et backend, frameworks web modernes, intégration de l'IA, architecture évolutive et conception centrée sur l'utilisateur",
   "Column_2_title": "Affaires & Technologie",
@@ -33,5 +33,9 @@
   "About_2_title": "Identité de Marque & Visuelle",
   "About_2_description": "Création d’identités visuelles cohérentes à travers la conception de logos, palettes de couleurs et typographies — pour une présence mémorable sur les sites web, les emballages et les boutiques en ligne.",
   "About_3_title": "Stratégie Digitale, SEO & Conversion",
-  "About_3_description": "Accompagnement dans la croissance en ligne avec des stratégies digitales sur mesure, une optimisation SEO et des techniques axées sur la conversion — adaptées au contenu et au e-commerce."
+  "About_3_description": "Accompagnement dans la croissance en ligne avec des stratégies digitales sur mesure, une optimisation SEO et des techniques axées sur la conversion — adaptées au contenu et au e-commerce.",
+
+  "Contact": "Contact",
+  "Contact_Me": "Commencer",
+  "Contact_Description": "Vous avez un projet en tête ou souhaitez simplement dire bonjour ? Je serais ravi de vous lire."
 }
