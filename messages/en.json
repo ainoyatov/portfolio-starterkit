@@ -26,5 +26,13 @@
   "Project_3_Title": "Investment Company",
   "Project_3_Description": "Trusted Arizona realty company specializing in buying and selling homes, offering property listings, market insights, and personalized services for both buyers and sellers across Arizona communities.",
 
-  "About_Quote": "Building with purpose, designing with passion."
+  "About_Me": "I'm a tech-driven problem solver who specializes in building intuitive, scalable web solutions. With a passion for clean design and modern development practices, I help businesses bring their ideas to life online. Whether it's a custom website, an eCommerce platform, or a digital strategy, I focus on delivering results that are both functional and impactful.",
+  "About_Quote": "Building with purpose, designing with passion.",
+  "About_1_title": "Web & eCommerce Development",
+  "About_1_description": "Designing and building scalable websites and eCommerce platforms using modern frameworks and cloud infrastructure — delivering fast, secure, and intuitive user experiences.",
+  "About_2_title": "Brand & Visual Identity",
+  "About_2_description": "Crafting cohesive brand systems through logo design, color palettes, and typography to ensure a consistent and memorable presence across websites, packaging, and online shops.",
+  "About_3_title": "Digital Strategy, SEO & Conversion",
+  "About_3_description": "Helping businesses grow online through tailored digital strategies, search engine optimization, and conversion-focused techniques — optimized for both content and commerce."
+
 }

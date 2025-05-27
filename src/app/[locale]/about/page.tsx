@@ -13,7 +13,7 @@ export default function About({params}:{params: {locale:string}}) {
       <section className="max-w-4xl mx-auto text-center">
         <h1 className="text-4xl font-bold mb-6">{t('About')}</h1>
         <p className="text-lg text-gray-600 mb-12">
-          {t('Page_Description')}
+          {t('About_Me')}
         </p>
 
         {/* Profile Section */}
@@ -30,21 +30,21 @@ export default function About({params}:{params: {locale:string}}) {
           </blockquote>
         </div>
 
-        {/* Expertise Columns */}
+        {/* Expertise Abouts */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           <div className="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-transform duration-300 hover:-translate-y-1">
-            <h2 className="text-xl font-semibold mb-2">{t('Column_1_title')}</h2>
-            <p className="text-gray-600">{t('Columns_1_description')}</p>
+            <h2 className="text-xl font-semibold mb-2">{t('About_1_title')}</h2>
+            <p className="text-gray-600">{t('About_1_description')}</p>
           </div>
 
           <div className="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-transform duration-300 hover:-translate-y-1">
-            <h2 className="text-xl font-semibold mb-2">{t('Column_2_title')}</h2>
-            <p className="text-gray-600">{t('Columns_2_description')}</p>
+            <h2 className="text-xl font-semibold mb-2">{t('About_2_title')}</h2>
+            <p className="text-gray-600">{t('About_2_description')}</p>
           </div>
 
           <div className="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-transform duration-300 hover:-translate-y-1">
-            <h2 className="text-xl font-semibold mb-2">{t('Column_3_title')}</h2>
-            <p className="text-gray-600">{t('Columns_3_description')}</p>
+            <h2 className="text-xl font-semibold mb-2">{t('About_3_title')}</h2>
+            <p className="text-gray-600">{t('About_3_description')}</p>
           </div>
         </div>
 
