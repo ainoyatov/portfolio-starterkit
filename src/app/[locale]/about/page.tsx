@@ -3,7 +3,9 @@ import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function About() {
+export default function About({params}:{params: {locale:string}}) {
+  const {locale} = params
+
   const t = useTranslations('')
 
   return (
@@ -51,7 +53,7 @@ export default function About() {
           <h2 className="text-2xl font-bold mb-4">{t('Contact')}</h2>
           <p className="text-gray-600 mb-6">{t('Page_Description')}</p>
           <a
-            href="/en/contact"
+            href={`/${locale}/contact`}
             className="inline-block bg-black text-white px-6 py-3 rounded hover:bg-gray-800 transition"
           >
             {t('Contact_Me')}
