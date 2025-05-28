@@ -36,6 +36,10 @@
 
   "Contact": "Contact",
   "Contact_Me": "Get Started",
-  "Contact_Description": "Have a project in mind or just want to say hello? I'd love to hear from you."
+  "Contact_Description": "Have a project in mind or just want to say hello? I'd love to hear from you.",
+  "Full_Name": "Full Name",
+  "Email": "Email",
+  "Phone": "Phone",
+  "Message": "Message"
 
 }

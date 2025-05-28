@@ -37,5 +37,9 @@
 
   "Contact": "Contacto",
   "Contact_Me": "Comenzar",
-  "Contact_Description": "¿Tienes un proyecto en mente o solo quieres saludar? Me encantaría saber de ti."
+  "Contact_Description": "¿Tienes un proyecto en mente o solo quieres saludar? Me encantaría saber de ti.",
+  "Full_Name": "Nombre completo",
+  "Email": "Correo electrónico",
+  "Phone": "Teléfono",
+  "Message": "Mensaje"
 }

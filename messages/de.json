@@ -36,6 +36,10 @@
   
   "Contact": "Kontakt",
   "Contact_Me": "Loslegen",
-  "Contact_Description": "Du hast ein Projekt im Kopf oder möchtest einfach Hallo sagen? Ich freue mich auf deine Nachricht."
+  "Contact_Description": "Du hast ein Projekt im Kopf oder möchtest einfach Hallo sagen? Ich freue mich auf deine Nachricht.",
+  "Full_Name": "Vollständiger Name",
+  "Email": "E-Mail",
+  "Phone": "Telefon",
+  "Message": "Nachricht"
 
 }

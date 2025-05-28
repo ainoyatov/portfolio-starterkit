@@ -9,10 +9,10 @@ export default function About({params}:{params: {locale:string}}) {
   const t = useTranslations('')
 
   return (
-    <main className="min-h-screen bg-white text-gray-900 px-6 py-16">
+    <main className="min-h-screen  text-primary dark:text-gray-500 px-6 py-16">
       <section className="max-w-4xl mx-auto text-center">
         <h1 className="text-4xl font-bold mb-6">{t('About')}</h1>
-        <p className="text-lg text-gray-600 mb-12">
+        <p className="text-lg text-gray-600 mb-12 ">
           {t('About_Me')}
         </p>
 
@@ -25,7 +25,7 @@ export default function About({params}:{params: {locale:string}}) {
             height={150}
             className="rounded-full shadow-md"
           />
-          <blockquote className="italic text-gray-500 max-w-xl">
+          <blockquote className="italic text-primary max-w-xl">
             {t('About_Quote')}
           </blockquote>
         </div>
@@ -54,7 +54,7 @@ export default function About({params}:{params: {locale:string}}) {
           <p className="text-gray-600 mb-6">{t('Contact_Description')}</p>
           <a
             href={`/${locale}/contact`}
-            className="inline-block bg-black text-white px-6 py-3 rounded hover:bg-gray-800 transition"
+            className="inline-block bg-primary text-white px-6 py-3 rounded hover:bg-gray-800 transition"
           >
             {t('Contact_Me')}
           </a>

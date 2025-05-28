@@ -37,5 +37,9 @@
 
   "Contact": "連絡先",
   "Contact_Me": "始める",
-  "Contact_Description": "プロジェクトのご相談でも、ご挨拶だけでも大歓迎です。お気軽にご連絡ください。"
+  "Contact_Description": "プロジェクトのご相談でも、ご挨拶だけでも大歓迎です。お気軽にご連絡ください。",
+  "Full_Name": "氏名",
+  "Email": "メールアドレス",
+  "Phone": "電話番号",
+  "Message": "メッセージ"
 }

@@ -55,13 +55,13 @@ const ContactForm = ({ params }: { params: { locale: string } }) => {
 
     return (
         <form action={FormAction}>
-            <div className="flex-1 flex justify-center p-4">
-                <div className="p-8 rounded-lg shadow-lg w-full max-w-md bg-white bg-opacity-70">
-                    <div className="space-y-4">
-                        <input type="text" name="full-name" placeholder="Full Name" className="w-full p-3 rounded-md border border-gray-300 text-black placeholder-gray-600" />
-                        <input type="email" name="email" placeholder="Email" className="w-full p-3 rounded-md border border-gray-300 text-black placeholder-gray-600" />
-                        <input type="text" name="phone" placeholder="Phone" className="w-full p-3 rounded-md border border-gray-300 text-black placeholder-gray-600" />
-                        <textarea name="message" placeholder="Your Message" className="w-full p-3 rounded-md border border-gray-300 text-black placeholder-gray-600 h-24 resize-none" />
+            <div className="flex-1 flex justify-center p-4 ">
+                <div className="p-8 rounded-lg shadow-lg w-full max-w-md bg-primary dark:bg-slate-500 bg-opacity-70">
+                    <div className="space-y-4 ">
+                        <input type="text" name="full-name" placeholder={t('Full_Name')} className="w-full p-3 rounded-md border border-gray-300 text-black  placeholder-gray-600 dark:placeholder-gray-300" />
+                        <input type="email" name="email" placeholder={t('Email')} className="w-full p-3 rounded-md border border-gray-300 text-black placeholder-gray-600 dark:placeholder-gray-300" />
+                        <input type="text" name="phone" placeholder={t('Phone')} className="w-full p-3 rounded-md border border-gray-300 text-black placeholder-gray-600 dark:placeholder-gray-300" />
+                        <textarea name="message" placeholder={t('Message')} className="w-full p-3 rounded-md border border-gray-300 text-black placeholder-gray-600 h-24 resize-none dark:placeholder-gray-300" />
 
                         <div className='mt-4'>
                             <ReCAPTCHA 
