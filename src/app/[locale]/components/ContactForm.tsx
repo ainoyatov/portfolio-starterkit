@@ -1,27 +1,28 @@
 'use client';
 
-// import { sendEmail } from "@/lib/sendEmail";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ReCAPTCHA from 'react-google-recaptcha';
-import { useTranslations } from 'next-intl'
+import { useTranslations } from 'next-intl';
 
 export type FormDataPoints = {
     full_name?: string,
     email?: string,
     phone?: string,
     message?: string
-}
+};
 
 const ContactForm = ({ params }: { params: { locale: string } }) => {
-
-    const { locale } = params
-    const t = useTranslations('')
+    const { locale } = params;
+    const t = useTranslations('');
 
     const [state, setState] = useState<Partial<FormDataPoints>>({});
     const [captcha, setCaptcha] = useState<string | null>(null);
     const [isToggled, setIsToggled] = useState(false);
 
-    const toggle = () => setIsToggled(!isToggled);
+    // Enable submit button once captcha is passed
+    useEffect(() => {
+        setIsToggled(!!captcha); //same as setIsToggled(captcha !== null);
+    }, [captcha]);
 
     const FormAction = async (formData: FormData) => {
         if (captcha) {
@@ -30,53 +31,50 @@ const ContactForm = ({ params }: { params: { locale: string } }) => {
                 email: formData.get('email') as string,
                 phone: formData.get('phone') as string,
                 message: formData.get('message') as string,
-            }
+            };
 
             const verifyCaptcha = await fetch('/api/recaptcha', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ captcha })
-            })
+            });
 
             const { success, message } = await verifyCaptcha.json();
 
             if (success) {
                 setState(payload);
-                // console.log(payload);
                 // sendEmail(payload);
                 alert(message);
-                // alert('Your message has been sent. Thank you for contacting us.')
                 window.location.reload();
             } else {
-                alert(message);
-                // alert('Please refresh the page and re-verify Captcha');
+                alert(message || 'Captcha verification failed. Please try again.');
             }
         } else {
-            alert('Please verify Captcha.')
+            alert('Please verify Captcha.');
         }
-    }
+    };
 
     return (
         <form action={FormAction}>
-            <div className="flex-1 flex justify-center p-4 ">
+            <div className="flex-1 flex justify-center p-4">
                 <div className="p-8 rounded-lg shadow-lg w-full max-w-md bg-primary dark:bg-slate-500 bg-opacity-70">
-                    <div className="space-y-4 ">
-                        <input type="text" name="full-name" placeholder={t('Full_Name')} className="w-full p-3 rounded-md border border-gray-300 text-black  placeholder-gray-600 dark:placeholder-gray-300" />
+                    <div className="space-y-4">
+                        <input type="text" name="full-name" placeholder={t('Full_Name')} className="w-full p-3 rounded-md border border-gray-300 text-black placeholder-gray-600 dark:placeholder-gray-300" />
                         <input type="email" name="email" placeholder={t('Email')} className="w-full p-3 rounded-md border border-gray-300 text-black placeholder-gray-600 dark:placeholder-gray-300" />
                         <input type="text" name="phone" placeholder={t('Phone')} className="w-full p-3 rounded-md border border-gray-300 text-black placeholder-gray-600 dark:placeholder-gray-300" />
                         <textarea name="message" placeholder={t('Message')} className="w-full p-3 rounded-md border border-gray-300 text-black placeholder-gray-600 h-24 resize-none dark:placeholder-gray-300" />
 
-                        <div className='mt-4'>
+                        <div className="mt-4">
                             <ReCAPTCHA 
-                                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA!} 
-                                className='w-full mt-4'
+                                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA!}
+                                className="w-full mt-4"
                                 onChange={setCaptcha}
                             />
                         </div>
 
                         <div className="py-2">
                             <button
-                                disabled={isToggled}
+                                disabled={!isToggled}
                                 type="submit"
                                 className={`w-full p-3 rounded-md text-white font-bold transition ${isToggled ? 'bg-black hover:bg-gray-800' : 'bg-black opacity-50 cursor-not-allowed'}`}
                             >
@@ -87,7 +85,99 @@ const ContactForm = ({ params }: { params: { locale: string } }) => {
                 </div>
             </div>
         </form>
-    )
-}
+    );
+};
 
 export default ContactForm;
+
+
+// 'use client';
+
+// // import { sendEmail } from "@/lib/sendEmail";
+// import { useState } from "react";
+// import ReCAPTCHA from 'react-google-recaptcha';
+// import { useTranslations } from 'next-intl'
+
+// export type FormDataPoints = {
+//     full_name?: string,
+//     email?: string,
+//     phone?: string,
+//     message?: string
+// }
+
+// const ContactForm = ({ params }: { params: { locale: string } }) => {
+
+//     const { locale } = params
+//     const t = useTranslations('')
+
+//     const [state, setState] = useState<Partial<FormDataPoints>>({});
+//     const [captcha, setCaptcha] = useState<string | null>(null);
+//     const [isToggled, setIsToggled] = useState(false);
+
+//     const toggle = () => setIsToggled(!isToggled);
+
+//     const FormAction = async (formData: FormData) => {
+//         if (captcha) {
+//             const payload: FormDataPoints = {
+//                 full_name: formData.get('full-name') as string,
+//                 email: formData.get('email') as string,
+//                 phone: formData.get('phone') as string,
+//                 message: formData.get('message') as string,
+//             }
+
+//             const verifyCaptcha = await fetch('/api/recaptcha', {
+//                 method: 'POST',
+//                 headers: { 'Content-Type': 'application/json' },
+//                 body: JSON.stringify({ captcha })
+//             })
+
+//             const { success, message } = await verifyCaptcha.json();
+
+//             if (success) {
+//                 setState(payload);
+//                 // sendEmail(payload);
+//                 alert(message);
+//                 // window.location.reload();
+//             } else {
+//                 alert(message);
+//             }
+//         } else {
+//             alert('Please verify Captcha.')
+//         }
+//     }
+
+//     return (
+//         <form action={FormAction}>
+//             <div className="flex-1 flex justify-center p-4 ">
+//                 <div className="p-8 rounded-lg shadow-lg w-full max-w-md bg-primary dark:bg-slate-500 bg-opacity-70">
+//                     <div className="space-y-4 ">
+//                         <input type="text" name="full-name" placeholder={t('Full_Name')} className="w-full p-3 rounded-md border border-gray-300 text-black  placeholder-gray-600 dark:placeholder-gray-300" />
+//                         <input type="email" name="email" placeholder={t('Email')} className="w-full p-3 rounded-md border border-gray-300 text-black placeholder-gray-600 dark:placeholder-gray-300" />
+//                         <input type="text" name="phone" placeholder={t('Phone')} className="w-full p-3 rounded-md border border-gray-300 text-black placeholder-gray-600 dark:placeholder-gray-300" />
+//                         <textarea name="message" placeholder={t('Message')} className="w-full p-3 rounded-md border border-gray-300 text-black placeholder-gray-600 h-24 resize-none dark:placeholder-gray-300" />
+
+//                         <div className='mt-4'>
+//                             <ReCAPTCHA 
+//                                 sitekey={process.env.NEXT_PUBLIC_RECAPTCHA!} 
+//                                 className='w-full mt-4'
+//                                 onChange={setCaptcha}
+//                             />
+//                         </div>
+
+//                         <div className="py-2">
+//                             <button
+//                                 disabled={!isToggled}
+//                                 type="submit"
+//                                 className={`w-full p-3 rounded-md text-white font-bold transition ${isToggled ? 'bg-white hover:bg-gray-800' : 'bg-black opacity-50 cursor-not-allowed'}`}
+//                             >
+//                                 {t('Contact_Me')}
+//                             </button>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+//         </form>
+//     )
+// }
+
+// export default ContactForm;

@@ -15,7 +15,7 @@ export async function POST(request: NextRequest) {
 
     if (response.success) {
         // CAPTCHA passed
-        return NextResponse.json({ success: true, message: "reCAPTCHA verified." });
+        return NextResponse.json({ success: true, message: "Your message has been sent. Thank you for contacting us" });
     } else {
         // CAPTCHA failed
         return NextResponse.json({ success: false, message: "reCAPTCHA verification failed.", error: response });
