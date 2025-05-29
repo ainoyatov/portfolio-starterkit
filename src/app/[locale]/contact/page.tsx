@@ -1,4 +1,3 @@
-// src/app/[locale]/contact/page.tsx
 import { useTranslations } from 'next-intl'
 import ContactForm from '../components/ContactForm'
 

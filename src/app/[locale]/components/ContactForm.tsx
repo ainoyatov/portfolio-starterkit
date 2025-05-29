@@ -38,15 +38,18 @@ const ContactForm = ({ params }: { params: { locale: string } }) => {
                 body: JSON.stringify({ captcha })
             })
 
-            const { response } = await verifyCaptcha.json();
+            const { success, message } = await verifyCaptcha.json();
 
-            if (response) {
+            if (success) {
                 setState(payload);
+                // console.log(payload);
                 // sendEmail(payload);
-                alert('Your message has been sent. Thank you for contacting us.')
+                alert(message);
+                // alert('Your message has been sent. Thank you for contacting us.')
                 window.location.reload();
             } else {
-                alert('Please refresh the page and re-verify Captcha');
+                alert(message);
+                // alert('Please refresh the page and re-verify Captcha');
             }
         } else {
             alert('Please verify Captcha.')
@@ -73,7 +76,7 @@ const ContactForm = ({ params }: { params: { locale: string } }) => {
 
                         <div className="py-2">
                             <button
-                                disabled={!isToggled}
+                                disabled={isToggled}
                                 type="submit"
                                 className={`w-full p-3 rounded-md text-white font-bold transition ${isToggled ? 'bg-black hover:bg-gray-800' : 'bg-black opacity-50 cursor-not-allowed'}`}
                             >
