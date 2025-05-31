@@ -10,7 +10,6 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
         <h1 className="text-4xl font-bold mb-6">{t('Contact')}</h1>
         <p className="text-lg text-gray-600 mb-12">{t('Contact_Description')}</p>
       </section>
-
       <ContactForm params={params} />
     </main>
   )
