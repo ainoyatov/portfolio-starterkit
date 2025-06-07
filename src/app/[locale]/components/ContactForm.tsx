@@ -25,34 +25,77 @@ const ContactForm = ({ params }: { params: { locale: string } }) => {
     }, [captcha]);
 
     const FormAction = async (formData: FormData) => {
+
         if (captcha) {
             const payload: FormDataPoints = {
-                full_name: formData.get('full-name') as string,
-                email: formData.get('email') as string,
-                phone: formData.get('phone') as string,
-                message: formData.get('message') as string,
+            full_name: formData.get('full-name') as string,
+            email: formData.get('email') as string,
+            phone: formData.get('phone') as string,
+            message: formData.get('message') as string,
             };
 
             const verifyCaptcha = await fetch('/api/recaptcha', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ captcha })
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ captcha }),
             });
 
-            const { success, message } = await verifyCaptcha.json();
+            const { success: captchaSuccess, message: captchaMessage } = await verifyCaptcha.json();
+
+            if (!captchaSuccess) {
+            alert(captchaMessage || 'Captcha verification failed.');
+            return;
+            }
+
+            const sendMail = await fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload),
+            });
+
+            const { success, message } = await sendMail.json();
 
             if (success) {
-                setState(payload);
-                // sendEmail(payload);
-                alert(message);
-                window.location.reload();
+            setState(payload);
+            alert(message);
+            // window.location.reload(); // optional
             } else {
-                alert(message || 'Captcha verification failed. Please try again.');
+            alert(message);
             }
         } else {
             alert('Please verify Captcha.');
         }
     };
+
+    // const FormAction = async (formData: FormData) => {
+    //     if (captcha) {
+    //         const payload: FormDataPoints = {
+    //             full_name: formData.get('full-name') as string,
+    //             email: formData.get('email') as string,
+    //             phone: formData.get('phone') as string,
+    //             message: formData.get('message') as string,
+    //         };
+
+    //         const verifyCaptcha = await fetch('/api/recaptcha', {
+    //             method: 'POST',
+    //             headers: { 'Content-Type': 'application/json' },
+    //             body: JSON.stringify({ captcha })
+    //         });
+
+    //         const { success, message } = await verifyCaptcha.json();
+
+    //         if (success) {
+    //             setState(payload);
+    //             // sendEmail(payload);
+    //             alert(message);
+    //             window.location.reload();
+    //         } else {
+    //             alert(message || 'Captcha verification failed. Please try again.');
+    //         }
+    //     } else {
+    //         alert('Please verify Captcha.');
+    //     }
+    // };
 
     return (
         <form action={FormAction}>
