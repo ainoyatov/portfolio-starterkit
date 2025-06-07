@@ -9,8 +9,8 @@ export async function POST(req: Request) {
 
   try {
     const data = await resend.emails.send({
-      from: 'Contact Form <contact@yourdomain.com>',
-      to: ['info@gravityelements.com'],
+      from: 'Contact Form <info@gravityelements.com>',
+      to: ['akmal.inoyatov@gmail.com'],
       subject: 'Dev Portfolio Contact Form',
       html: `
         <div style="font-family: sans-serif; line-height: 1.5;">
