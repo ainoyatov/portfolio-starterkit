@@ -5,7 +5,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: Request) {
   const body = await req.json();
-  const { full_name, email, phone, message } = body;
+  const { name, email, phone, message } = body;
 
   try {
     const data = await resend.emails.send({
@@ -15,7 +15,7 @@ export async function POST(req: Request) {
       html: `
         <div style="font-family: sans-serif; line-height: 1.5;">
           <h2>New Contact Form Submission</h2>
-          <p><strong>Name:</strong> ${full_name}</p>
+          <p><strong>Name:</strong> ${name}</p>
           <p><strong>Email:</strong> ${email}</p>
           <p><strong>Phone:</strong> ${phone}</p>
           <p><strong>Message:</strong><br/>${message}</p>
