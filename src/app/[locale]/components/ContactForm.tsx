@@ -134,39 +134,6 @@ const ContactForm = ({ params }: { params: { locale: string } }) => {
             </div>
         </form>
     );
-
-    // return (
-    //     <form action={FormAction}>
-    //         <div className="flex-1 flex justify-center p-4">
-    //             <div className="p-8 rounded-lg shadow-lg w-full max-w-md bg-primary dark:bg-slate-500 bg-opacity-70">
-    //                 <div className="space-y-4">
-    //                     <input type="text" name="name" placeholder={t('Full_Name')} className="w-full p-3 rounded-md border border-gray-300 text-black placeholder-gray-600 dark:placeholder-gray-300" />
-    //                     <input type="email" name="email" placeholder={t('Email')} className="w-full p-3 rounded-md border border-gray-300 text-black placeholder-gray-600 dark:placeholder-gray-300" />
-    //                     <input type="text" name="phone" placeholder={t('Phone')} className="w-full p-3 rounded-md border border-gray-300 text-black placeholder-gray-600 dark:placeholder-gray-300" />
-    //                     <textarea name="message" placeholder={t('Message')} className="w-full p-3 rounded-md border border-gray-300 text-black placeholder-gray-600 h-24 resize-none dark:placeholder-gray-300" />
-
-    //                     <div className="mt-4">
-    //                         <ReCAPTCHA 
-    //                             sitekey={process.env.NEXT_PUBLIC_RECAPTCHA!}
-    //                             className="w-full mt-4"
-    //                             onChange={setCaptcha}
-    //                         />
-    //                     </div>
-
-    //                     <div className="py-2">
-    //                         <button
-    //                             disabled={!isToggled}
-    //                             type="submit"
-    //                             className={`w-full p-3 rounded-md text-white font-bold transition ${isToggled ? 'bg-black hover:bg-gray-800' : 'bg-black opacity-50 cursor-not-allowed'}`}
-    //                         >
-    //                             {t('Contact_Me')}
-    //                         </button>
-    //                     </div>
-    //                 </div>
-    //             </div>
-    //         </div>
-    //     </form>
-    // );
 };
 
 export default ContactForm;
