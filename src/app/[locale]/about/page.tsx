@@ -46,7 +46,7 @@ export default function About({params}:{params: {locale:string}}) {
           </div>
         </div>
 
-        {/* Call to Action */}
+        
         <div className="text-center mt-10">
           <h2 className="text-2xl font-bold mb-4">{t('Contact')}</h2>
           <p className="text-gray-600 mb-6">{t('Contact_Description')}</p>
